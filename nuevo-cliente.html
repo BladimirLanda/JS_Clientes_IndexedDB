@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/tailwind.min.css"> <!--Tailwind como framework CSS-->
+    <title>CRM IndexedDB - JS Moderno</title>
+</head>
+
+<body class="min-h-100 bg-gray-200">
+    <div class="min-h-screen md:align-top md:flex ">
+        <aside class="bg-teal-600 px-5 py-10 md:w-2/5 lg:w-2/5 xl:w-1/5">
+            <h1 class="uppercase text-white tracking-wide text-2xl font-bold mt-2">CRM - IndexedDB</h1>
+            <p class="mt-10 text-white">Administra tus Clientes con el CRM - IndexedDB</p>
+            <nav class="mt-8">
+                <a href="index.html" class="px-3 py-1 text-white block hover:bg-teal-900 
+                hover:text-yellow-400 ">
+                    Clientes
+                </a>
+
+                <a href="nuevo-cliente.html" class="px-3 py-1 text-white block mt-2 bg-teal-700 hover:bg-teal-700
+                hover:text-yellow-400">
+                    Nuevo Cliente
+                </a>
+
+                <p class="px-3 py-1 text-gray-500 block mt-2 cursor-default">
+                    Editando Cliente
+                </p>
+            </nav>
+        </aside>
+
+        <main class="px-5 py-10 bg-gray-200 md:w-3/5 xl:w-4/5">
+            <h2 class="text-3xl font-light text-center">Nuevo Cliente</h2>
+
+            <div class="flex flex-col mt-10 items-center">
+                <div class="-my-2 py-2 overflow-x-auto w-10/12 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 md:w-8/12 lg:w-6/12">
+                    <div class=" shadow overflow-hidden border-b border-gray-200 rounded-lg">
+                        <form id="formulario" class="bg-white p-3">
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="nombre">Nombre</label>
+                                <input
+                                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    type="text"
+                                    id="nombre"
+                                    name="nombre"
+                                    placeholder="Nombre Cliente"/>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Correo</label>
+                                <input 
+                                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="Email Cliente"/>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="telefono">Teléfono</label>
+                                <input 
+                                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    type="tel"
+                                    id="telefono"
+                                    name="telefono"
+                                    placeholder="Teléfono Cliente"/>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="empresa">Empresa</label>
+                                <input 
+                                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    type="text"
+                                    id="empresa"
+                                    name="empresa"
+                                    placeholder="Empresa Cliente"/>
+                            </div>
+
+                            <input
+                                type="submit"
+                                class="bg-teal-600 w-full mt-5 p-2 text-white uppercase font-bold cursor-pointer hover:bg-teal-900"
+                                value="Agregar Cliente"/>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+<!--Forma de uso de un módulo publico-->
+<script src="js/functions.js"></script>
+<script src="js/nuevocliente.js"></script>
+</body>
+</html>
